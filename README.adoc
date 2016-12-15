@@ -26,3 +26,15 @@ It is a very simple spring boot based web application.
 - for build and deployment run: `now`
 - The very first run of `now` asks for your email address.
 - Works like a charm!
+
+== use your own docker
+
+- build image: `docker build . -t sample-ci-cd`
+- start a fresh container: `docker run -it --rm -p8080:8080 sample-ci-cd`
+- navigate to http://localhost:8080
+
+== run it locally without docker
+
+- build and test it: `./gradlew build`
+- start the webapp: `./gradlew bootRun`
+- navigate to http://localhost:8080
