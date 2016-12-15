@@ -1,0 +1,4 @@
+= Sample gradle CI / CD
+
+This is a sample gradle project that tests various continuous integration and delivery services.
+It is a very simple spring boot based web application.
