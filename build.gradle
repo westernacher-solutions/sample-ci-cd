@@ -25,10 +25,14 @@ repositories {
 	mavenCentral()
 }
 
-
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+// docker optimization to download dependencies only
+task downloadDependencies() {
+    configurations.testRuntime.files
 }
 
 wrapper {

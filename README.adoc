@@ -2,3 +2,18 @@
 
 This is a sample gradle project that tests various continuous integration and delivery services.
 It is a very simple spring boot based web application.
+
+== Travis CI
+
+- https://travis-ci.org
+- requires organization authorization
+
+== Snap CI
+
+- https://snap-ci.com
+- requires organization authorization
+
+== Codefresh
+
+- https://codefresh.io
+- Does not support github organisations directly but can be configured with any github URL.
