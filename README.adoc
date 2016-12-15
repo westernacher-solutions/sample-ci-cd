@@ -25,7 +25,7 @@ It is a very simple spring boot based web application.
 - one time preparation: `npm install -g now`
 - for build and deployment run: `now`
 - The very first run of `now` asks for your email address.
-- Works like a charm!
+- Works like a charm! Now copies the target URL into the clipboard.
 
 == use your own docker
 
