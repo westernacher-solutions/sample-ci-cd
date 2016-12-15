@@ -17,3 +17,12 @@ It is a very simple spring boot based web application.
 
 - https://codefresh.io
 - Does not support github organisations directly but can be configured with any github URL.
+- Codefresh web ui shows 'not found'. :(
+
+== zeit now
+
+- https://zeit.co
+- one time preparation: `npm install -g now`
+- for build and deployment run: `now`
+- The very first run of `now` asks for your email address.
+- Works like a charm!
