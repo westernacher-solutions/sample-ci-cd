@@ -1,5 +1,6 @@
 = Sample gradle CI / CD
 :icons: font
+:sourcedir: .
 
 This is a sample gradle project that tests various continuous integration and delivery services.
 
@@ -10,9 +11,9 @@ The repository can be found at https://github.com/westernacher-solutions/sample-
 
 The https://travis-ci.org continuous integration service automatically builds the github repository after each push to the configured branch.
 The current repository can be found at https://travis-ci.org/westernacher-solutions/sample-ci-cd image:https://api.travis-ci.org/westernacher-solutions/sample-ci-cd.svg?branch=master[status].
-A link:.travis.yml[.travis.yml] configuration file with some basic setup is needed for building.
+A link:{sourcedir}/.travis.yml[.travis.yml] configuration file with some basic setup is needed for building.
 Travis runs the tests but does not visualize the junit report files.
-It is recommended to enable the test reporting in link:build.gradle[build.gradle].
+It is recommended to enable the test reporting in link:{sourcedir}/build.gradle[build.gradle].
 
 == Snap CI
 
@@ -31,7 +32,7 @@ It is not tested here but mentioned for completeness.
 == Codefresh
 
 The https://codefresh.io service is both a continuous integration and delivery service built on docker.
-In contrast to the other services above it does not understand gradle builds itself but it depends on a Dockerfile which is shipped in this repository.
+In contrast to the other services above it does not understand gradle builds itself but it depends on a link:{sourcedir}/Dockerfile[Dockerfile] which is shipped in this repository.
 It does not only build the software - it deploys it by creating a docker container.
 The full web application is available after launching.
 The current repository can be found at https://g.codefresh.io/repositories/westernacher-solutions/sample-ci-cd/services .
@@ -46,7 +47,7 @@ It does not provide a full web UI but a command line tool instead.
 
 NOTE: It must be installed initially with `npm install -g now`.
 
-The build and deployment process is started by running `now`.
+The build and deployment process is started by running `now` and will use our link:{sourcedir}/Dockerfile[Dockerfile].
 The very first run of `now` asks for your email address for authentication.
 It works like a charm!
 The now tool copies the target URL into the clipboard.
@@ -54,7 +55,7 @@ Opening this url in the browser either shows the running build process or the de
 
 == use your own docker
 
-- build image: `docker build . -t sample-ci-cd`
+- build image from our link:{sourcedir}/Dockerfile[Dockerfile]: `docker build . -t sample-ci-cd`
 - start a fresh container: `docker run -it --rm -p8080:8080 sample-ci-cd`
 - navigate to http://localhost:8080
 

@@ -440,9 +440,9 @@ The repository can be found at <a href="https://github.com/westernacher-solution
 <div class="paragraph">
 <p>The <a href="https://travis-ci.org" class="bare">https://travis-ci.org</a> continuous integration service automatically builds the github repository after each push to the configured branch.
 The current repository can be found at <a href="https://travis-ci.org/westernacher-solutions/sample-ci-cd" class="bare">https://travis-ci.org/westernacher-solutions/sample-ci-cd</a> <span class="image"><img src="https://api.travis-ci.org/westernacher-solutions/sample-ci-cd.svg?branch=master" alt="status"></span>.
-A <a href=".travis.yml">.travis.yml</a> configuration file with some basic setup is needed for building.
+A <a href="https://github.com/westernacher-solutions/sample-ci-cd/blob/master/.travis.yml">.travis.yml</a> configuration file with some basic setup is needed for building.
 Travis runs the tests but does not visualize the junit report files.
-It is recommended to enable the test reporting in <a href="build.gradle">build.gradle</a>.</p>
+It is recommended to enable the test reporting in <a href="https://github.com/westernacher-solutions/sample-ci-cd/blob/master/build.gradle">build.gradle</a>.</p>
 </div>
 </div>
 </div>
@@ -473,7 +473,7 @@ It is not tested here but mentioned for completeness.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The <a href="https://codefresh.io" class="bare">https://codefresh.io</a> service is both a continuous integration and delivery service built on docker.
-In contrast to the other services above it does not understand gradle builds itself but it depends on a Dockerfile which is shipped in this repository.
+In contrast to the other services above it does not understand gradle builds itself but it depends on a <a href="https://github.com/westernacher-solutions/sample-ci-cd/blob/master/Dockerfile">Dockerfile</a> which is shipped in this repository.
 It does not only build the software - it deploys it by creating a docker container.
 The full web application is available after launching.
 The current repository can be found at <a href="https://g.codefresh.io/repositories/westernacher-solutions/sample-ci-cd/services" class="bare">https://g.codefresh.io/repositories/westernacher-solutions/sample-ci-cd/services</a> .
@@ -503,7 +503,7 @@ It must be installed initially with <code>npm install -g now</code>.
 </table>
 </div>
 <div class="paragraph">
-<p>The build and deployment process is started by running <code>now</code>.
+<p>The build and deployment process is started by running <code>now</code> and will use our <a href="https://github.com/westernacher-solutions/sample-ci-cd/blob/master/Dockerfile">Dockerfile</a>.
 The very first run of <code>now</code> asks for your email address for authentication.
 It works like a charm!
 The now tool copies the target URL into the clipboard.
@@ -517,7 +517,7 @@ Opening this url in the browser either shows the running build process or the de
 <div class="ulist">
 <ul>
 <li>
-<p>build image: <code>docker build . -t sample-ci-cd</code></p>
+<p>build image from our <a href="https://github.com/westernacher-solutions/sample-ci-cd/blob/master/Dockerfile">Dockerfile</a>: <code>docker build . -t sample-ci-cd</code></p>
 </li>
 <li>
 <p>start a fresh container: <code>docker run -it --rm -p8080:8080 sample-ci-cd</code></p>
@@ -550,7 +550,7 @@ Opening this url in the browser either shows the running build process or the de
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-12-18 00:21:01 CET
+Last updated 2016-12-18 00:40:05 CET
 </div>
 </div>
 </body>
