@@ -459,20 +459,27 @@ Junit report files are not visualized similar to Travis CI.</p>
 </div>
 </div>
 <div class="sect1">
+<h2 id="_bitbucket_pipelines">Bitbucket pipelines</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <a href="https://bitbucket.org/" class="bare">https://bitbucket.org/</a> pipelines service is similar to Travis CI but works only with repositories hosted on Bitbucket.
+It replaces the discontinued Bamboo cloud service.
+It is not tested here but mentioned for completeness.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_codefresh">Codefresh</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://codefresh.io" class="bare">https://codefresh.io</a></p>
-</li>
-<li>
-<p>Does not support github organisations directly but can be configured with any github URL.</p>
-</li>
-<li>
-<p>Codefresh web ui shows 'not found'. :(</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>The <a href="https://codefresh.io" class="bare">https://codefresh.io</a> service is both a continuous integration and delivery service built on docker.
+In contrast to the other services above it does not understand gradle builds itself but it depends on a Dockerfile which is shipped in this repository.
+It does not only build the software - it deploys it by creating a docker container.
+The full web application is available after launching.
+The current repository can be found at <a href="https://g.codefresh.io/repositories/westernacher-solutions/sample-ci-cd/services" class="bare">https://g.codefresh.io/repositories/westernacher-solutions/sample-ci-cd/services</a> .
+The setup is done in the web UI.
+Junit report files are not visualized similar to Travis CI but it supports running integration tests.
+Complex deployment scenarios - so called compositions - can be defined like setting up a database container.</p>
 </div>
 </div>
 </div>
@@ -543,7 +550,7 @@ Opening this url in the browser either shows the running build process or the de
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-12-17 12:11:33 CET
+Last updated 2016-12-18 00:21:01 CET
 </div>
 </div>
 </body>
