@@ -8,6 +8,7 @@ It is a very simple spring boot based web application.
 - https://travis-ci.org is a continuous integration service that build the github repository after each push to the
 configured branch.
 - current repository: https://travis-ci.org/westernacher-solutions/sample-ci-cd
+- image:https://api.travis-ci.org/westernacher-solutions/sample-ci-cd.svg?branch=master[status]
 - Needs a link:.travis.yml[.travis.yml] configuration file.
 
 == Snap CI
