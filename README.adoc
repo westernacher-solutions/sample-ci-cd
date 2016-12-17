@@ -1,15 +1,16 @@
 = Sample gradle CI / CD
+:icons: font
 
 This is a sample gradle project that tests various continuous integration and delivery services.
 It is a very simple spring boot based web application.
 
 == Travis CI
 
-- https://travis-ci.org is a continuous integration service that build the github repository after each push to the
-configured branch.
-- current repository: https://travis-ci.org/westernacher-solutions/sample-ci-cd
-- image:https://api.travis-ci.org/westernacher-solutions/sample-ci-cd.svg?branch=master[status]
-- Needs a link:.travis.yml[.travis.yml] configuration file.
+The https://travis-ci.org continuous integration service automatically builds the github repository after each push to the configured branch.
+The current repository can be found at https://travis-ci.org/westernacher-solutions/sample-ci-cd image:https://api.travis-ci.org/westernacher-solutions/sample-ci-cd.svg?branch=master[status].
+A link:.travis.yml[.travis.yml] configuration file with some basic setup is needed for building.
+Travis runs the tests but does not visualize the junit report files.
+It is recommended to enable the test reporting in link:build.gradle[build.gradle].
 
 == Snap CI
 
@@ -24,11 +25,16 @@ configured branch.
 
 == zeit now
 
-- https://zeit.co
-- one time preparation: `npm install -g now`
-- for build and deployment run: `now`
-- The very first run of `now` asks for your email address.
-- Works like a charm! Now copies the target URL into the clipboard.
+The https://zeit.co build and deployment service is a build and deployment service.
+It does not provide a full web UI but a command line tool instead.
+
+NOTE: It must be installed initially with `npm install -g now`.
+
+The build and deployment process is started by running `now`.
+The very first run of `now` asks for your email address for authentication.
+It works like a charm!
+The now tool copies the target URL into the clipboard.
+Opening this url in the browser either shows the running build process or the deployed web app after deployment has finished.
 
 == use your own docker
 
