@@ -23,6 +23,21 @@ The setup is done in the web UI.
 There is no configuration file in the repository.
 Junit report files are not visualized similar to Travis CI.
 
+== Circle CI
+
+- https://circleci.com
+- Todo
+
+== Bitrise
+
+- https://www.bitrise.io/
+- Todo
+
+== Shippable
+
+- https://app.shippable.com/
+- Todo
+
 == Bitbucket pipelines
 
 The https://bitbucket.org/ pipelines service is similar to Travis CI but works only with repositories hosted on Bitbucket.
